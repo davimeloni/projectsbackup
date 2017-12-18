@@ -1,0 +1,14 @@
+
+.manageitens {
+    margin-top: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-inverse {
+    padding: 10px;
+}
+
+.search {
+    float: right;
+    margin-right: 40px;
+}

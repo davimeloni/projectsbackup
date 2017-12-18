@@ -1,0 +1,12 @@
+adb_server_notify: Failed to establish connection to ADB server
+emulator: Listening for console connections on port: 5554
+emulator: Serial number of this emulator (for ADB): emulator-5554
+Your emulator is out of date, please update by launching Android Studio:
+ - Start Android Studio
+ - Select menu "Tools > Android > SDK Manager"
+ - Click "SDK Tools" tab
+ - Check "Android SDK Tools" checkbox
+ - Click "OK"
+
+emulator: Listening for console connections on port: 5554
+emulator: Serial number of this emulator (for ADB): emulator-5554

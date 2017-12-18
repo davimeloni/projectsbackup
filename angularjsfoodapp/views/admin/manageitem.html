@@ -1,0 +1,70 @@
+<body class="body-mi">
+
+    <header class="row">
+        <div class="navbar-inverse navbar-fixed-top">
+            <div class="form-inline">
+                <div class="form-group createitem">
+                    <button class="btn btn-navbar" style="margin-left: 20px;" ng-click="createItem()">Create Item</button>
+                </div>
+                <div class="form-group title">
+                    <span style="margin-left: 400px; font-size: 25px; color: white">Manage Itens</span>
+                </div>
+                <div class="form-group" style="float: right; margin-right: 30px;">
+                    <div class="input-group" >
+                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                        <input type="text" class="form-control" placeholder="Search" ng-model="searchItem">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container manageitens">
+        <br/>
+        <table class="table table-responsive table-hover">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Edit/Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in itens | filter:searchItem">
+                    <td>{{item.image}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.category}}</td>
+                    <td>{{item.categorytype}}</td>
+                    <td>{{item.price.toFixed(2) | currency:'R$':2}}</td>
+                    <td>
+                        <span ng-click="editItem(item)">
+                            Edit
+                            <i class="fa fa-pencil"></i>
+                        </span>
+                        <br/>
+                        <span ng-click="removeItem(item._id)">
+                            Delete
+                            <i class="fa fa-trash"></i>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <!--
+    <tbody>
+        <tr ng-repeat="roll in sushi">
+        <td>{{ roll.name }}</td>
+        <td>{{ roll.fish }}</td>
+        <td>{{ roll.tastiness }}</td>
+        </tr>
+    </tbody>
+    -->
+</body>
